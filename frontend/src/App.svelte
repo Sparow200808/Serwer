@@ -9,6 +9,12 @@
     return res.text();
   }
 
+  async function addNumbers(a:number, b: number) {
+    const res = await fetch('/add/${a}/${b}',{
+      method: "GET"
+    })
+  }
+
   async function getHome() {
     response = await sendRequest();
   }
